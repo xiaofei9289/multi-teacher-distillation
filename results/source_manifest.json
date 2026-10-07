@@ -1,0 +1,19 @@
+{
+  "audited_on": "2026-10-07",
+  "source": "Completed local project snapshot; matching public code release not established by this manifest.",
+  "artifact_hashes": [
+    {
+      "source_relative_path": "docs/paper_vgmt_v6/results/table_v6_automatic_results.csv",
+      "sha256": "879b3c5daa918191798fad3556eeedcd5c58e29c6cd5b99aeb0c795763b73137"
+    },
+    {
+      "source_relative_path": "docs/paper_vgmt_v6/results/table_v6_human_results.csv",
+      "sha256": "8e2ec850e31c3b5c73e3e58fc160911a5c629d068986332ed977ba06d8c32f53"
+    },
+    {
+      "source_relative_path": "reports/qtp_vgmtd_02_remedy_3_decision_gate.json",
+      "sha256": "13da7d5f667a043434d8f139ce96613459669204d191ddea19edf0bfd71f3118"
+    }
+  ],
+  "verification": "Saved-result audit; no new GPU training or kernel tests."
+}

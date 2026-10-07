@@ -1,0 +1,45 @@
+{
+  "config_id": "vgmt_v6_blinded_grounding_audit_availability_amendment",
+  "amendment_id": "vgmt_v6_human_audit_availability_amendment_20260828",
+  "parent_config_id": "vgmt_v6_blinded_grounding_audit",
+  "amendment_timing": "post_unsealing_post_automatic_summary_pre_human_annotation",
+  "reason": "one formal arm has fewer than 20 safe outputs at the frozen reference seed",
+  "seed": 260701,
+  "reference_training_seed": 260631,
+  "positive_outputs_per_variant": 20,
+  "safe_outputs_target_per_variant": 20,
+  "safe_sampling_policy": "all_available_up_to_target_without_replacement",
+  "formal_variants": [
+    "sft_only",
+    "answer_only_kd",
+    "single_teacher_rationale_kd",
+    "unfiltered_mtd",
+    "verifier_hard_filter_mtd",
+    "verifier_weighted_mtd",
+    "verifier_dynamic_product_mtd",
+    "role_aware_verifier_weighted_mtd"
+  ],
+  "blind_fields": [
+    "system_variant",
+    "training_seed",
+    "gold_label",
+    "automatic_support_scores"
+  ],
+  "judgment_fields": [
+    "answer_supported",
+    "rationale_faithful",
+    "unsupported_material_claim",
+    "citation_valid"
+  ],
+  "allowed_judgments": ["Yes", "No", "Unclear"],
+  "independent_annotators": 2,
+  "adjudicate_disagreements": true,
+  "system_unblinding_before_adjudication": false,
+  "human_comparison_bootstrap_replicates": 10000,
+  "confidence": 0.95,
+  "unclear_policy": "conservative_failure_for_support_faithfulness_and_citation_and_positive_for_hallucination",
+  "primary_positive_stratum_unchanged": true,
+  "safe_control_stratum_only_is_availability_capped": true,
+  "confirmatory_positive_claim_authorization_allowed": false,
+  "interpretation_scope": "availability_amended_supportive_only"
+}

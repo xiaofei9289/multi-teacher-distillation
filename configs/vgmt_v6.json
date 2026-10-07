@@ -1,0 +1,85 @@
+{
+  "config_id": "vgmt_v6_verifier_core",
+  "freeze_version": "vgmt_v6_20260827",
+  "seed": 260598,
+  "data": {
+    "adjudicated_requests": "data/teacher_requests/vgmt_teacher_requests_train_v2_adjudicated.jsonl",
+    "diagonal_outputs": "data/teacher_outputs/vgmt_teacher_outputs_train_v2.jsonl",
+    "human_gold": "data/splits/vgmt_human_gold_v2.jsonl",
+    "verifier_scores": "data/processed/vgmt_v3/verifier_scores_train.jsonl",
+    "reused_gate_model": "data/processed/vgmt_v5/role_disentangled_gate_v5.json",
+    "reused_gate_oof": "data/processed/vgmt_v5/role_disentangled_gate_oof_v5.jsonl",
+    "reused_role_report": "reports/vgmt_role_disentangled_gate_v5.json",
+    "supervision_root": "data/processed/vgmt_v6/distillation",
+    "supervision_manifest": "manifests/vgmt_supervision_v6_sha256.json",
+    "supervision_report": "reports/vgmt_supervision_v6.json"
+  },
+  "teacher_scoring": {
+    "primary_gate_variant": "no_role",
+    "role_ablation_gate_variant": "full",
+    "hard_filter_threshold_source": "grouped_train_oof_f1",
+    "minimum_weight": 0.000001,
+    "dynamic_product": [
+      "verifier_compatibility",
+      "diagonal_consensus_fraction",
+      "calibrated_correctness_probability"
+    ],
+    "empty_selection_fallback": "highest_calibrated_correctness_teacher",
+    "rationale_selection": "highest_weight_valid_candidate_matching_materialized_decision"
+  },
+  "student": {
+    "architecture": "minimind_hierarchical_selective_heads_fixed_diagnostic",
+    "claim_labels": ["Supported", "Refuted", "NotEnoughInfo"],
+    "query_labels": ["Answer", "Abstain"],
+    "loss_weights": {
+      "generation": 1.0,
+      "sufficiency": 1.0,
+      "polarity": 1.0,
+      "answerability": 1.0
+    },
+    "exclude_decision_span_from_lm_loss": true,
+    "common_recipe_required": true,
+    "underlying_examples_per_epoch": 4330,
+    "virtual_epochs": 3,
+    "variants": [
+      "sft_only",
+      "answer_only_kd",
+      "single_teacher_rationale_kd",
+      "unfiltered_mtd",
+      "verifier_hard_filter_mtd",
+      "verifier_weighted_mtd",
+      "verifier_dynamic_product_mtd",
+      "role_aware_verifier_weighted_mtd"
+    ],
+    "target_materialization": {
+      "positive_min_probability": 0.55,
+      "safety_margin": 0.1,
+      "safe_fallback_rationale": "Available evidence does not provide enough support for a reliable answer."
+    }
+  },
+  "evaluation": {
+    "primary_method": "verifier_weighted_mtd",
+    "primary_baseline": "unfiltered_mtd",
+    "gate_selection_split": "grouped_train_oof",
+    "student_selection": "fixed_recipe_no_posthoc_threshold_tuning",
+    "legacy_dev_selection_forbidden": true,
+    "sealed_test_examples": 267,
+    "paired_group_bootstrap_replicates": 10000,
+    "confidence": 0.95,
+    "unsafe_noninferiority_margin": 0.03,
+    "support_probability_threshold": 0.8,
+    "rationale_audit_scope": "all_positive_outputs_plus_all_unsafe_outputs",
+    "primary_metrics": [
+      "answer_accuracy",
+      "decision_macro_f1",
+      "claim_support_rate",
+      "rationale_faithfulness",
+      "hallucination_rate",
+      "unsafe_answer_rate",
+      "abstention_f1"
+    ],
+    "required_label_recalls": ["Supported", "Refuted", "NotEnoughInfo", "Answer", "Abstain"],
+    "role_comparison": ["role_aware_verifier_weighted_mtd", "verifier_weighted_mtd"],
+    "role_null_is_compatible_with_core_claim": true
+  }
+}

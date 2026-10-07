@@ -1,0 +1,37 @@
+{
+  "config_id": "vgmt_v6_blinded_grounding_audit",
+  "seed": 260701,
+  "reference_training_seed": 260631,
+  "samples_per_variant": 40,
+  "positive_outputs_per_variant": 20,
+  "safe_outputs_per_variant": 20,
+  "formal_variants": [
+    "sft_only",
+    "answer_only_kd",
+    "single_teacher_rationale_kd",
+    "unfiltered_mtd",
+    "verifier_hard_filter_mtd",
+    "verifier_weighted_mtd",
+    "verifier_dynamic_product_mtd",
+    "role_aware_verifier_weighted_mtd"
+  ],
+  "blind_fields": [
+    "system_variant",
+    "training_seed",
+    "gold_label",
+    "automatic_support_scores"
+  ],
+  "judgment_fields": [
+    "answer_supported",
+    "rationale_faithful",
+    "unsupported_material_claim",
+    "citation_valid"
+  ],
+  "allowed_judgments": ["Yes", "No", "Unclear"],
+  "independent_annotators": 2,
+  "adjudicate_disagreements": true,
+  "system_unblinding_before_adjudication": false,
+  "human_comparison_bootstrap_replicates": 10000,
+  "confidence": 0.95,
+  "unclear_policy": "conservative_failure_for_support_faithfulness_and_citation_and_positive_for_hallucination"
+}

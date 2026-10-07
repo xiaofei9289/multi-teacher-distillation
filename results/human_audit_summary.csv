@@ -1,0 +1,9 @@
+variant,display_name,audited_rows,citation_valid_rate,claim_support_rate,hallucination_rate,positive_rows,rationale_faithfulness,safe_rows
+sft_only,SFT only,40,0.35,0.35,0.65,20,0.0,20
+answer_only_kd,Answer-only KD,40,0.4,0.2,0.6,20,0.0,20
+single_teacher_rationale_kd,Single-teacher rationale KD,34,0.3,0.05,0.7,20,0.15,14
+unfiltered_mtd,Unfiltered MTD,40,0.05,0.05,0.95,20,0.25,20
+verifier_hard_filter_mtd,Hard-filter MTD,40,0.2,0.2,0.8,20,0.2,20
+verifier_weighted_mtd,Verifier-weighted MTD,40,0.0,0.0,1.0,20,0.55,20
+verifier_dynamic_product_mtd,Dynamic-product MTD,40,0.0,0.0,1.0,20,0.45,20
+role_aware_verifier_weighted_mtd,Role-aware weighted MTD,40,0.0,0.0,1.0,20,0.55,20

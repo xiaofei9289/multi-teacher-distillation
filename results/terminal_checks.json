@@ -1,0 +1,15 @@
+{
+  "completed_task_rules": 24,
+  "expected_task_rules": 24,
+  "checks": {
+    "all_24_crossfit_and_full_rules": true,
+    "label_retention": true,
+    "mechanism_feasibility": false,
+    "primary_feasibility": false,
+    "safety": true
+  },
+  "status": "failed_remedy_3_terminal_scientific_attempt",
+  "mean_primary_delta": 0.0272332418469996,
+  "mean_mechanism_delta": -0.009274421011772968,
+  "positive_primary_seed_directions": 2
+}

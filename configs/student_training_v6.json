@@ -1,0 +1,92 @@
+{
+  "config_id": "vgmt_student_common_recipe_v6",
+  "status": "prospective_frozen_before_v6_training",
+  "created_date": "2026-08-27",
+  "target_contract_id": "verifier_core_targets_v6",
+  "student": {
+    "family": "MiniMind-3",
+    "architecture": "dense_hierarchical_selective_heads_fixed_diagnostic",
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "base_parameter_count": 63912192,
+    "hierarchical_head_parameter_count": 2307,
+    "total_parameter_count": 63914499,
+    "base_weight": "minimind/out/full_sft_768.pth",
+    "base_weight_sha256": "5b8c49f6c9d965092e651cafeeaeb8705558632b3fd4ac8ab319cbc5a3cbc4a0",
+    "tokenizer": "minimind/model"
+  },
+  "data": {
+    "supervision_root": "data/processed/vgmt_v6/distillation",
+    "supervision_manifest": "manifests/vgmt_supervision_v6_sha256.json",
+    "supervision_preflight": "reports/vgmt_v6_supervision_preflight.json",
+    "rows_per_variant": 12990,
+    "unique_source_examples": 4330,
+    "virtual_epochs_in_file": 3,
+    "legacy_dev_forbidden": true,
+    "test_forbidden": true
+  },
+  "variants": [
+    "sft_only",
+    "answer_only_kd",
+    "single_teacher_rationale_kd",
+    "unfiltered_mtd",
+    "verifier_hard_filter_mtd",
+    "verifier_weighted_mtd",
+    "verifier_dynamic_product_mtd",
+    "role_aware_verifier_weighted_mtd"
+  ],
+  "optimization": {
+    "epochs": 1,
+    "batch_size": 4,
+    "accumulation_steps": 8,
+    "effective_batch_size": 32,
+    "base_learning_rate": 0.00001,
+    "head_learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "max_seq_len": 1024,
+    "max_prompt_tokens": 640,
+    "dtype": "bfloat16",
+    "num_workers": 4,
+    "seeds": [260631, 260632, 260633],
+    "reference_seed": 260631,
+    "formal_run_count": 24,
+    "checkpoint_rule": "final_update_only_no_dev_selection",
+    "numerical_stability_amendment": {
+      "date": "2026-08-27",
+      "reason": "The first sft_only seed 260631 attempt produced a non-finite FP16 gradient before any checkpoint or evaluation was created.",
+      "scope": "Common precision changed from float16 to bfloat16 for every arm and seed; all data, optimization budgets, losses, comparisons, and evaluation rules remain unchanged.",
+      "failed_attempt_is_formal_result": false
+    }
+  },
+  "loss": {
+    "generation_weight": 1.0,
+    "sufficiency_weight": 1.0,
+    "polarity_weight": 1.0,
+    "answerability_weight": 1.0,
+    "common_positive_weights_from_human_train_priors": {
+      "sufficiency": 0.8602941176470589,
+      "polarity_support": 0.6385542168674698,
+      "answerability": 1.9411764705882353
+    },
+    "decision_line_lm_target": "fully_masked",
+    "polarity_row_weight": "teacher_target_p_sufficiency"
+  },
+  "decoding": {
+    "positive_min_probability": 0.55,
+    "safety_margin": 0.1,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0
+  },
+  "reporting": {
+    "main_table": "mean_and_standard_deviation_across_three_seeds",
+    "primary_comparison": "verifier_weighted_mtd_minus_unfiltered_mtd",
+    "primary_inference": "crossed_bootstrap_over_three_training_seeds_and_leakage_groups",
+    "role_comparison_is_secondary": true,
+    "seed_ensemble_as_primary_forbidden": true
+  }
+}

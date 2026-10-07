@@ -1,0 +1,180 @@
+{
+  "scope": "Formal V6 supervision, training, prediction, evaluation, and audit code with local import dependencies; excludes data, models, generated manifests, and external MiniMind source",
+  "files": [
+    {
+      "path": "configs/human_grounding_audit_v6.json",
+      "sha256": "e248a28bd7250a7ebe7d0fc23e87b71f34689b0875cae522d67e432f6a7062d5",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "configs/human_grounding_audit_v6_availability_amendment.json",
+      "sha256": "14ad34d41811572b0e3b4930770f458f57fe15f39eb9081563d4c5b0e312cd87",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "configs/student_training_v6.json",
+      "sha256": "7acb8afc8d965277a4ca5b7578428aa04d778e9cc38e7fc536188436e1d042ed",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "configs/vgmt_v6.json",
+      "sha256": "e9dd931b3655c3b7ba816e2802b18102b6808c1ebf0e16e284e7a8978ee96db6",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/score_vgmt_verifier_v3.py",
+      "sha256": "643f9de8ce771f81a71b517f76eb9f2f36b60c0ec986e20f760fae51bc83282e",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_2/__init__.py",
+      "sha256": "c945a859d9f2579de58788837fb92751b528176061d2203abeed7128e40568b8",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_2/decision_contract_v4_2.py",
+      "sha256": "479a2623118e00d5975eccafcba877d5f13479df7d323e33f613a7bcd215200e",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_3/__init__.py",
+      "sha256": "c84708841afc703cac21af7c140e6b155a094729ad92fbcf05f10753bec16673",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_3/vgmt_dataset_v4_3.py",
+      "sha256": "284fd63525132c7f985f2e3cb46c4bb2506f63282dc22258cb85c951d8ff4829",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/__init__.py",
+      "sha256": "bf6327856e131cfd71cee975b168a09b3bd9b2f5ea12459bb844438f7956ee4c",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/evaluate_selective_v5.py",
+      "sha256": "49e3b09bda0070f35519522647eb5727fa26bd9e81ac8e2cab85fa3f7a383593",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/fit_role_disentangled_gate_v5.py",
+      "sha256": "a3e277739b031734d28ed12fc87e8d5d631417b41d17409a71dae2e4f28c9081",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/hierarchical_head_v5.py",
+      "sha256": "5290eb783b3f0f9f58ea7bab3d1198ade6d7e7d090dac4424bdc89675c538c4c",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/inference_io_v5.py",
+      "sha256": "315f81155c9fbbaf8244d1a073e08e50082e17c8f6847dd26453e1b7b251557f",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/loss_contract_v5.py",
+      "sha256": "dcfb3be14c3996684d892f40e30a2cfa2d40370e2057a8e3a111b9f43c7672b7",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/predict_hierarchical_student_v5.py",
+      "sha256": "f83dbaf405fd9311cd38a9cb6ae006c9ccd27ea171e28e7e88469e8db8124ff7",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/preflight_supervision_v5.py",
+      "sha256": "78594440792bf042f4aeea76223c15617a9a6065762f53c6256839544f00fa68",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/train_hierarchical_student_v5.py",
+      "sha256": "808bbed95805328f4da8ccfebbafae3f138335ef803a7fae89810b4e0f97cf93",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/vgmt_dataset_v5.py",
+      "sha256": "d843aff469c87b71fed38164f41abd45957ee5f5716ee1959b196488263d9248",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v5/vgmt_v5_contract.py",
+      "sha256": "d84e3004f30a19495b46a424569199d4f21be838a0e4a22e1e87f11b64c986bf",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/__init__.py",
+      "sha256": "d33b8bb84a1c154b8d2c3e6911ea6d3a7c73a20c5cadc7dbcd49e29f0a81cbc1",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/build_blinded_grounding_audit_v6.py",
+      "sha256": "11eda2a9cefc3233c7ec111d664534d85c6c677cc9c38e80b3fb586327c4e5a6",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/build_blinded_grounding_audit_v6_availability_amendment.py",
+      "sha256": "212cf2f26c6322bf3c4a45c7c63169afcca62cb23b32f2651d5213809f5329d7",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/build_verifier_core_supervision_v6.py",
+      "sha256": "0e251d210578aed04ba5ad87ed762fb2b6560e9b0c90925afa39905dc24222fd",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/check_research_mainline_v6.py",
+      "sha256": "df868048ee1c226cfe86e0c3e1f1a4f41976e01f56f4c1234fb8cd28b6aa2c8a",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/evaluate_grounded_predictions_v6.py",
+      "sha256": "222ece563e16b54c23ebfaf9c1a5aaec84c918bf3b1655827d9870ea0c3fc3cf",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/freeze_sealed_evaluation_v6.py",
+      "sha256": "6d668c8381c05976d12f2ae1e1ae095b751eb664a55daddd85445692dc341d7b",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/package_student_return_v6.py",
+      "sha256": "ffcc3ad3d827c7281986b9898d4aac4d84bcb9dbedf164b65d6981127574ecb0",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/run_formal_matrix_v6.py",
+      "sha256": "c7eb1d30592e4a4026f1c8c4d8c9c8b57c01c8ce827f91abca8df988c15953a0",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/run_sealed_prediction_matrix_v6.py",
+      "sha256": "5ce97bda1a90fa25e015b064fad572c9d42c65d7d804e673d2f2f7d7fd403656",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/score_blinded_grounding_audit_v6.py",
+      "sha256": "30c597dbc9f3c1c2df399769940c3e2917fb006c3a5710be170ce632b9b074ca",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/score_blinded_grounding_audit_v6_availability_amendment.py",
+      "sha256": "577bd81c0af1f0e23c8d7ac6d89a7255887c8c122e6b79d9e74a2301cc49a0d3",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/score_generated_grounding_v6.py",
+      "sha256": "d6f7659205cdf0c578d598bce45eb877371bda963cca69122a0ead22335e6a37",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/summarize_grounded_matrix_v6.py",
+      "sha256": "d4a33ff293c2de7c10e56eca5499b55a1ba45e6335454a37dc59f309d32422b1",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v6/verify_handoff_v6.py",
+      "sha256": "0e88ec8d5e8200f923d8b9cf3812c08887115c0b851e3cfda62791374cdaf21b",
+      "transformation": "none; original source bytes"
+    }
+  ]
+}

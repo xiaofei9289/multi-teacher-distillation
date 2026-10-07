@@ -2,7 +2,7 @@
 
 ## Included evidence
 
-The repository also includes 35 unchanged source/configuration files for the formal V6 pipeline and its local import dependencies. [Implementation map](IMPLEMENTATION.md) describes the reading order and external requirements. `results/code_release_manifest.json` records the SHA-256 of each published source/configuration file.
+The repository also includes 38 unchanged source/configuration files for the formal V6 pipeline and its local import dependencies. [Implementation map](IMPLEMENTATION.md) describes the reading order and external requirements. `results/code_release_manifest.json` records the SHA-256 of each published source/configuration file.
 
 `results/decision_results.csv` exports automatic decision metrics from the frozen V6 eight-arm table. `results/human_audit_summary.csv` is a separate human audit. `results/terminal_checks.json` describes a later follow-up decision gate, not the formal 63.9M V6 result.
 

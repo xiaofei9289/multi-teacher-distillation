@@ -57,7 +57,7 @@ In the terminal follow-up, all 24 crossfit/full decision-rule checks, label rete
 - [Reproduction levels and study-version boundaries](docs/REPRODUCIBILITY.md).
 - [Audited source hashes](results/source_manifest.json).
 
-This repository includes 35 original source/configuration files for the formal V6 pipeline, aggregate tables, and public audit protocols. Raw human-adjudicated rows, model weights, generated input manifests, and the external MiniMind implementation are not included. The code snapshot is inspectable; independent end-to-end training reproduction still requires those inputs and a validated environment. See the [implementation map](docs/IMPLEMENTATION.md).
+This repository includes 38 original source/configuration files for the formal V6 pipeline, aggregate tables, and public audit protocols. Raw human-adjudicated rows, model weights, generated input manifests, and the external MiniMind implementation are not included. The code snapshot is inspectable; independent end-to-end training reproduction still requires those inputs and a validated environment. See the [implementation map](docs/IMPLEMENTATION.md).
 
 ## Preprint
 

@@ -42,6 +42,21 @@
       "transformation": "none; original source bytes"
     },
     {
+      "path": "scripts/student_v4_3/decision_head_v4_3.py",
+      "sha256": "72edd0406980ac52a72e7cb2bab7acabbf613d52b88ee96b1ceabbac7aed7652",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_3/legal_label_scorer_v4_3.py",
+      "sha256": "46703fc58904f1c0eb437fe07c18502228e7e8f820a902727c02ae4e9ccff0ef",
+      "transformation": "none; original source bytes"
+    },
+    {
+      "path": "scripts/student_v4_3/loss_contract_v4_3.py",
+      "sha256": "d459ef6e44b2142ef24904c82503748c27bc3cc26be005b21afe2616534cc590",
+      "transformation": "none; original source bytes"
+    },
+    {
       "path": "scripts/student_v4_3/vgmt_dataset_v4_3.py",
       "sha256": "284fd63525132c7f985f2e3cb46c4bb2506f63282dc22258cb85c951d8ff4829",
       "transformation": "none; original source bytes"

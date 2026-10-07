@@ -1,6 +1,6 @@
 # Implementation map
 
-The formal V6 pipeline reuses the V5 hierarchical student components and earlier decision-contract utilities. Version numbers in module names describe code lineage; the experiment recipe in this repository is the formal V6 recipe. The 35 source/configuration files were copied unchanged, with hashes in [code_release_manifest.json](../results/code_release_manifest.json).
+The formal V6 pipeline reuses the V5 hierarchical student components and earlier decision-contract utilities. Version numbers in module names describe code lineage; the experiment recipe in this repository is the formal V6 recipe. The 38 source/configuration files were copied unchanged, with hashes in [code_release_manifest.json](../results/code_release_manifest.json).
 
 ## Suggested reading order
 
